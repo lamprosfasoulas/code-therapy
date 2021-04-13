@@ -1,5 +1,9 @@
 /**
+<<<<<<< HEAD
  *test2 
+=======
+ *
+>>>>>>> 0344b82caf996487d12e7d77e63e65f27b56e7ad
  * Day: 2 / 100 (!- Just for indication, this is not the project of the day, maybe ... -!)
  * Creator: Lampros Fasoulas
  * This is just a helper project
