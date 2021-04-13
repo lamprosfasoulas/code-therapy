@@ -1,5 +1,5 @@
 /**
- *test 
+ *test2 
  * Day: 2 / 100 (!- Just for indication, this is not the project of the day, maybe ... -!)
  * Creator: Lampros Fasoulas
  * This is just a helper project
