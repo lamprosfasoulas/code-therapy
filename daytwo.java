@@ -63,7 +63,8 @@ public class daytwo {
     public static String[] getTransactions(){
         Scanner s = new Scanner(System.in);
         
-
+        //this method scans for user input and parses it as transaction
+        //data
         System.out.println("--Welcome to the Lampros BlockChain--");
         System.out.println("--Enter the number of transactions--");
         int transactionsNum = s.nextInt();
@@ -75,9 +76,6 @@ public class daytwo {
 
         return values;
 
-        //testing here
-        
-        
     }
 
     public static void main(String[] args) {
