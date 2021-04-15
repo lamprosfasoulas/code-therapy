@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class talk{
 
-    public static void talk(String msg){//run the terminal command say with the message
+    public static void talk(String msg){//run the terminal command say with the message.
         try{
             Runtime.getRuntime().exec("say " + msg);
 
