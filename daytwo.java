@@ -4,10 +4,12 @@ import java.util.Scanner;
 
 
 /**
- * 
+ * Date: 13/04/2021
  * Day: 2 / 100
+ * 
  * Creator: Lampros Fasoulas
  * 
+ * -- Project Description --
  * This is me trying to make a sample blockchain
  * 
  */

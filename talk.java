@@ -1,8 +1,10 @@
 /**
- * 
- *
+ * Date: 13/04/2021
  * Day: 2 / 100 (!- Just for indication, this is not the project of the day, maybe ... -!)
+ * 
  * Creator: Lampros Fasoulas
+ * 
+ * -- Project Description --
  * This is just a helper project
  *  
  **/

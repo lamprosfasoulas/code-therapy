@@ -1,8 +1,11 @@
 /**
- * 
+ * Date: 12/04/2021
  * Day: 1 / 100
+ * 
  * Creator: Lampros Fasoulas
  * 
+ * -- Project Description --
+ * N/A
  */
 
 import java.util.Scanner;

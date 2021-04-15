@@ -3,16 +3,18 @@ import java.util.Scanner;
 
 
 /**
- * 
+ * Date: 14/04/2021
  * Day: 3 / 100
+ * 
  * Creator: Lampros Fasoulas
  * 
+ * -- Project Description --
  * This is a terminal like app
  * 
  */
 
 
-public class test {
+public class daythree {
 
     // here are some global primitives
     public String [] commands = {"q","test"};
@@ -66,9 +68,9 @@ public class test {
     }
 
     public static void main(String[] args) {
-        test test = new test();
+        daythree day = new daythree();
 
         System.out.println("I am listening :");
-        test.takeCommand();
+        day.takeCommand();
     }
 }
