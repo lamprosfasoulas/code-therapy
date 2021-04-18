@@ -18,11 +18,11 @@ import java.util.List;
  //unfortunately this shit throws stack overflow error due to recursion 
  //so this is for educational perposes only :-)
 public class daysix {
-    private static int min = 97 , max = 122;//because 32 is space
+    private static int min = 97 , max = 122;//because 32 is space these are the decimal values of a-z you can add your own 
     private static StringBuilder testValue = new StringBuilder("");
 
     private static void incrementLastDigit(){
-            for (int i = min; i < max; i++) {//min and max is my charset in ASCII
+            for (int i = min; i <= max; i++) {//min and max is my charset in ASCII
                 testValue.setCharAt(testValue.length()-1, (char) i);
                 System.out.println(testValue);
             }
