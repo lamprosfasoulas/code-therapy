@@ -73,15 +73,24 @@ public class daynine {
         public String toString() {
             //change true and false to vacant or full
             //add that if the room is full display dates
-            return "Room [Size=" + String.valueOf(roomSize) + " Vacant=" + String.valueOf(vacant) +"\n";
+            return "Room [Room=" + String.valueOf(roomId) + " Size=" + String.valueOf(roomSize) + " Vacant=" + String.valueOf(vacant) +"\n";
         }
     }
-    public void setup(int rooms, int sizeOne, int sizeTwo, int sizeThree){
+    public static void add(int rooms, int sizeOne, int sizeTwo, int sizeThree){
+        int prevId;
+        if (roomsList.size() != 0) {
+            prevId = roomsList.get(roomsList.size()-1).getRoomId() + 1;
+        }
+        else{
+            prevId = 1;
+        }
+            
         if (rooms != sizeOne + sizeTwo + sizeThree) {
             System.out.println("Error: Arguments do not match:");
+            System.exit(0);
         }
         for (int i = 0; i < rooms; i++) {
-            int rId = i + 1;
+            int rId =  prevId + i;
             int sz = 0;
             if (sizeOne > 0) {
                 sz = 1;
@@ -96,26 +105,38 @@ public class daynine {
                 sizeThree --;
                 
             }
-            Room room = new Room(rId, sz, false, "", "");
+            Room room = new Room(rId, sz, true, "", "");
             roomsList.add(room);
         }
     }
+    public static void remove(int roomId){
+        roomsList.remove(roomsList.get(roomId));
+    }
 
     public static void view(){
-        //code goes here
+        System.out.println(roomsList.toString());
     }
-    public static void book(){
-        //code goes here
+    public static void book(int roomTBB, String dCI, String dCO){
+        Room roomChange = roomsList.get(roomTBB -1);
+        roomChange.setDateIN(dCI);
+        roomChange.setDateOUT(dCO);
+        roomChange.setVacant(false);
+        view();
     }
     public static void checkOut(){
         //code goes here
     }
 
     public static void main(String[] args) {
-        daynine day = new daynine();
-        day.setup(5, 1, 3, 1);
-        System.out.println(roomsList.toString());
-        //
+        add(3, 0, 1, 2);
+        add(5, 1, 3, 1);
+        add(2, 1, 0, 1);
+        view();
+        book(3, "fuck", "dCO");
+        //this need to be printed after each addition
+        //because when the last add is faulty the progrem adds the previous but doesnt
+        //print them
+        //make an authentication method for ease of use
         
     }
     
