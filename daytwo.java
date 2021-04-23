@@ -16,10 +16,7 @@ import java.util.Scanner;
 
 public class daytwo {
 
-    public class BlockChainProgram {
     
-        
-    }
     public static class Block {
         private String[] transactions;
         private int blockHash;
