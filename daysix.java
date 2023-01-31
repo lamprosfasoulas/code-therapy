@@ -1,4 +1,5 @@
 import java.nio.Buffer;
+import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.List;
 
@@ -18,14 +19,19 @@ public class daysix {
     private static int min = 97 , max = 122;//because 32 is space these are the decimal values of a-z you can add your own 
     private static int tries;
     private static StringBuilder testValue = new StringBuilder("");
-    private static String keyString= "hello";
-
+    private static String keyString;
+    static float startTime;
+    static float stopTime;
     private static void incrementLastDigit(){
             for (int i = min; i <= max; i++) {//min and max is my charset in ASCII
                 tries ++;
                 testValue.setCharAt(testValue.length()-1, (char) i);
-                System.out.println(testValue);
+                System.out.print(testValue + "\r");
                 if(testValue.toString().equals(keyString)){
+                    stopTime = System.nanoTime();
+                    DecimalFormat df = new DecimalFormat("#.##");
+                    float elapsedTime = (stopTime - startTime)/1000000000;
+                    System.out.println("Word found: "+ testValue + "! It took " +tries + " tries and " + df.format(elapsedTime) + " seconds.");
                     System.exit(0);
                 }
                 else if (i == max) {
@@ -54,8 +60,17 @@ public class daysix {
     }
     
     public static void main(String[] args) {
-        testValue.append((char) min);
-        incrementLastDigit();
+        try {
+            startTime = System.nanoTime();
+            keyString = args[0];
+            testValue.append((char) min);
+            incrementLastDigit();
+        } catch (Exception e) {
+            System.out.println("Please enter a word as an argument.");
+        }
+            
+       
+        
     }
 	
 }
